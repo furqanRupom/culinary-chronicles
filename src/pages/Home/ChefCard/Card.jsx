@@ -1,6 +1,7 @@
 import React from "react";
 // import { FaCookie } from 'react-icons/fa';
 import { TbChefHat } from "react-icons/tb";
+import LazyLoad from "react-lazyload";
 
 const Card = ({ chefInfo }) => {
   const {
@@ -17,11 +18,14 @@ const Card = ({ chefInfo }) => {
           <TbChefHat className="text-red-500 mr-2" size={24} />
           <div className="font-bold text-white">CulinaryChronicles</div>
         </div>
+        <LazyLoad>
         <img
           className="w-full h-[450px] md:h-[450px] object-cover transition duration-300 ease-in-out transform group-hover:scale-105"
           src={image}
           alt={name}
         />
+        </LazyLoad>
+
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition duration-300"></div>
         <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-bl from-transparent to-slate-900">
           <h2 className="text-2xl font-bold mb-2 text-white">{name}</h2>

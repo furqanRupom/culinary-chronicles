@@ -5,12 +5,12 @@ import { ChefContext } from "../../../Providers/AuthProviders";
 import { useLoaderData } from "react-router-dom";
 import Card from "../ChefCard/Card";
 import About from "../About/About";
+import Recipe from "../Recipe/Recipe";
 const Home = () => {
   const { toggle } = useContext(ChefContext);
   const chefInformationData = useLoaderData();
   return (
     <>
-
       <div
         className={
           toggle
@@ -38,7 +38,7 @@ const Home = () => {
       </div>
 
       <div className="bg-gray-100 py-20 md:py-32 lg:py-44 px-10">
-      <About />
+        <About />
       </div>
 
       <div className="pt-20 pb-12 font-Nunito bg-gray-100 px-4">
@@ -62,6 +62,9 @@ const Home = () => {
         </div>
       </div>
 
+            <div className="bg-gray-100">
+            <Recipe />
+            </div>
 
     </>
   );
