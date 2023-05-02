@@ -6,13 +6,13 @@ export default {
       sm: "480px",
       // => @media (min-width: 640px) { ... }
 
-      md: "720px",
+      md: "692px",
       // => @media (min-width: 768px) { ... }
 
-      lg: "1024px",
+      lg: "1240px",
       // => @media (min-width: 1024px) { ... }
 
-      xl: "1200px",
+      xl: "1400px",
       // => @media (min-width: 1280px) { ... }
     },
     extend: {

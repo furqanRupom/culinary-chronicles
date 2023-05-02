@@ -18,7 +18,7 @@ const Card = ({ chefInfo }) => {
           <div className="font-bold text-white">CulinaryChronicles</div>
         </div>
         <img
-          className="w-full h-[340px] md:h-[450px] object-cover transition duration-300 ease-in-out transform group-hover:scale-105"
+          className="w-full h-[450px] md:h-[450px] object-cover transition duration-300 ease-in-out transform group-hover:scale-105"
           src={image}
           alt={name}
         />
@@ -39,7 +39,7 @@ const Card = ({ chefInfo }) => {
           </button>
         </div>
       </div>
-    
+
     </>
   );
 };

@@ -4,11 +4,13 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { ChefContext } from "../../../Providers/AuthProviders";
 import { useLoaderData } from "react-router-dom";
 import Card from "../ChefCard/Card";
+import About from "../About/About";
 const Home = () => {
   const { toggle } = useContext(ChefContext);
   const chefInformationData = useLoaderData();
   return (
     <>
+
       <div
         className={
           toggle
@@ -17,11 +19,11 @@ const Home = () => {
         }
       >
         <div className="absolute inset-0 bg-black opacity-5"></div>
-        <div className="container mx-auto md:px-4 py-10 sm:py-36 md:py-40 lg:py-48">
+        <div className="container mx-auto md:px-4 py-10 sm:py-32 md:py-40 lg:py-48">
           <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-7xl font-bold text-black mb-4">
             Culinary Chronicles
           </h1>
-          <p className="leading-relaxed text-xs md:text-2xl lg:text-4xl text-black mb-4 lg:mb-8">
+          <p className="leading-relaxed md:text-2xl lg:text-4xl text-black mb-4 lg:mb-8">
             Experience the best in fine dining <br /> with our award-winning
             cuisine
           </p>
@@ -35,11 +37,15 @@ const Home = () => {
         <div className="absolute inset-0"></div>
       </div>
 
+      <div className="bg-gray-100 py-20 md:py-32 lg:py-44 px-10">
+      <About />
+      </div>
+
       <div className="pt-20 pb-12 font-Nunito bg-gray-100 px-4">
         <h2 className="text-xl md:text-4xl font-bold text-center py-3">
           Our Culinary Team
         </h2>
-        <p className="leading-relaxed  md:text-md py-3 p">
+        <p className="leading-relaxed  md:text-md py-3 ">
           Discover the talented individuals who bring your favorite dishes to
           life! Our culinary team is made up of experienced chefs, sous chefs,
           pastry chefs, and line cooks who are passionate about creating
@@ -55,6 +61,8 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+
     </>
   );
 };

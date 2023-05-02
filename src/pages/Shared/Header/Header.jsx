@@ -13,7 +13,7 @@ const Header = () => {
       <header className="font-Nunito relative  w-full lg:flex justify-between items-center px-4 bg-gray-100">
         <div className="flex justify-between  items-center px-2 py-5">
           <div className=" text-xl md:text-3xl font-semibold">
-            {" "}
+          
             <h2 className="flex ">
               Culinary
               <TbChefHat />
