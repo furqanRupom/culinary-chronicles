@@ -2,9 +2,13 @@ import React, { useContext } from "react";
 import "./Home.css";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { ChefContext } from "../../../Providers/AuthProviders";
+import { useLoaderData } from "react-router-dom";
+import Card from "../ChefCard/Card";
 const Home = () => {
   const { toggle } = useContext(ChefContext);
+  const chefInformationData = useLoaderData()
   return (
+    <>
     <div
       className={
         toggle
@@ -30,6 +34,14 @@ const Home = () => {
       </div>
       <div className="absolute inset-0"></div>
     </div>
+
+
+    <div className="mt-20 mb-12">
+     {
+      chefInformationData.map(chefInfo => <Card key={chefInfo.id} chefInfo={chefInfo} />)
+     }
+    </div>
+    </>
   );
 };
 

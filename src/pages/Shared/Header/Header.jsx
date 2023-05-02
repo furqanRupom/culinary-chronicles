@@ -12,7 +12,7 @@ const Header = () => {
   return (
 
     <>
-    <header className="font-Nunito relative w-full lg:flex justify-between items-center px-4">
+    <header className="font-Nunito relative w-full lg:flex justify-between items-center px-4 shadow-lg">
       <div className="flex justify-between  items-center px-2 py-5">
         <div className=" text-xl md:text-3xl font-semibold">
           {" "}
@@ -129,7 +129,6 @@ const Header = () => {
 
     </header>
 
-          <hr />
     </>
   );
 };
