@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import { TbChefHat } from "react-icons/tb";
 import { RxCross1 } from "react-icons/rx";
 import { BiRightArrow } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ChefContext } from "../../../Providers/AuthProviders";
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+
+  const {toggle,setToggle} = useContext(ChefContext);
   return (
 
     <>
-    <header className="font-Nunito relative lg:flex justify-between items-center px-4">
+    <header className="font-Nunito relative w-full lg:flex justify-between items-center px-4">
       <div className="flex justify-between  items-center px-2 py-5">
-        <div className="text-3xl font-semibold">
+        <div className=" text-xl md:text-3xl font-semibold">
           {" "}
-          <h2 className="flex">
+          <h2 className="flex ">
             Culinary
             <TbChefHat />
             Chronicles
@@ -32,12 +34,12 @@ const Header = () => {
         <div
           className={
             toggle
-              ? "absolute lg:hidden w-full h-[400px] top-0 left-0 duration-300 bg-white"
+              ? "absolute lg:hidden w-full h-[500px] top-0 left-0 duration-300 bg-white"
               : "-translate-y-[800px] duration-300 lg:hidden"
           }
         >
           <div className="flex justify-between items-center px-4 py-5">
-            <div className="text-3xl font-semibold">
+            <div className="text-xl md:text-3xl font-semibold">
               {" "}
               <h2 className="flex">
                 Culinary
@@ -126,7 +128,7 @@ const Header = () => {
       </div>
 
     </header>
-    
+
           <hr />
     </>
   );

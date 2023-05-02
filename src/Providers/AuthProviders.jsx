@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 
-const AuthProviders = () => {
+export const ChefContext = createContext()
+const AuthProviders = ({children}) => {
+    const [toggle, setToggle] = useState(false);
+    const userInfo = {
+        toggle,
+        setToggle
+    }
     return (
-        <div>
-            
-        </div>
+       <ChefContext.Provider value={userInfo}>
+        {children}
+       </ChefContext.Provider>
     );
 };
 
