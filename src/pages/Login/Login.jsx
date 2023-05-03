@@ -1,11 +1,12 @@
 import React, { useContext, useRef, useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { FaGoogle,FaGithub } from "react-icons/fa";
 import { Link ,useLocation , useNavigate} from "react-router-dom";
 import { ChefContext } from "../../Providers/AuthProviders";
 
 
 const Login = () => {
-  const { LoginUser } = useContext(ChefContext);
+  const { LoginUser ,LogInWithGoogle,LoginWithGithub,toggle} = useContext(ChefContext);
   const [show, setShow] = useState(false);
 
   const emailRef = useRef();
@@ -13,11 +14,26 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate()
   const from = location.state?.from?.pathname || '/'
+
+  const signInWithGoogle = ()=>{
+      LogInWithGoogle()
+      .then(result=> console.log(result.user))
+      .catch(error => console.log(error.message))
+
+}
+const signInWithGithub = ()=>{
+        LoginWithGithub()
+        .then(result => console.log(result.user))
+        .catch(error => console.log(error.message))
+}
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const From = e.current
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+
+
 
     LoginUser(email, password)
       .then((result) => {
@@ -29,10 +45,10 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-200">
+    <div className="flex items-center justify-center h-screen bg-gray-200 -z-10">
       <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
         <h2 className="text-2xl font-medium mb-6 text-center">
-          Log In to Your Account
+          Sign In to Your Account
         </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
@@ -58,7 +74,7 @@ const Login = () => {
             >
               Password
             </label>
-            <div className="relative">
+            <div className={!toggle ? 'relative' : 'hidden'}>
               <input
                 type={show ? "text" : "password"}
                 id="password"
@@ -96,8 +112,36 @@ const Login = () => {
             type="submit"
             className="w-full bg-red-500 text-white py-2 rounded-lg mt-8 hover:bg-red-600"
           >
-            Log In
+         Sign In
           </button>
+
+
+            <div>
+
+            <button
+                onClick={signInWithGoogle}
+            className="w-full bg-blue-500 text-white py-2 rounded-lg flex items-center justify-center space-x-2 mt-8 hover:bg-white duration-200 hover:text-blue-500 hover:border hover:border-blue-500"
+          >
+
+            <FaGoogle className="mt-[0.20rem]"/>
+            <h2>
+            Sign in with Google
+            </h2>
+
+          </button>
+            <button
+                onClick={signInWithGithub}
+            className="w-full bg-black text-white py-2 rounded-lg flex items-center justify-center space-x-2 mt-8 hover:bg-white duration-200 hover:text-black hover:border hover:border-black"
+          >
+
+            <FaGoogle className="mt-[0.20rem]"/>
+            <h2>
+            Sign in with Github
+            </h2>
+
+          </button>
+            </div>
+
         </form>
         <div className="text-center mt-4">
           <span className="text-gray-600 mr-2">Don't have an account?</span>
