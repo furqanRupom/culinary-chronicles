@@ -62,9 +62,10 @@ const Home = () => {
         </div>
       </div>
 
-            <div className="bg-gray-100">
+            <div className="bg-gray-100 p-12">
             <Recipe />
             </div>
+            <hr />
 
     </>
   );

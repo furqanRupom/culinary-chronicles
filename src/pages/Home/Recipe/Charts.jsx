@@ -22,8 +22,11 @@ const CustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, 
 };
 
 const ChefPieChart = () => {
+  const width = window.innerWidth;
+  const isSmallDevice = width < 560;
+
   return (
-    <ResponsiveContainer width="100%" height={500}>
+    <ResponsiveContainer width="100%" height={ 500}>
       <PieChart>
         <Pie
           data={data}
@@ -31,7 +34,7 @@ const ChefPieChart = () => {
           cy="50%"
           labelLine={false}
           label={CustomizedLabel}
-          outerRadius={180}
+          outerRadius={isSmallDevice ? 120 : 200}
           fill="#8884d8"
           dataKey="value"
         >
