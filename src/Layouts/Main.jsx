@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../pages/Shared/Header/Header';
-import {Outlet} from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 import LazyLoad from 'react-lazyload';
 import Footer from '../pages/Shared/Footer/Footer';
 
@@ -12,7 +12,6 @@ const Main = () => {
             <main>
             <Outlet />
             </main>
-
             <Footer />
             </LazyLoad>
 

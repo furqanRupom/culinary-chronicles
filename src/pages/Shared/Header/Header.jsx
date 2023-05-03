@@ -66,14 +66,14 @@ const Header = () => {
                   className="w-fit"
                   to="/"
                 >
-                  <button className="hover:text-red-400 duration-200">Home</button>
+                  <button className="hover:text-red-400 duration-200 ">Home</button>
 
                   </ActiveLink>
                 <ActiveLink
                   className="w-fit"
                   to="/experience"
                 >
-                  <button className="hover:text-red-400 duration-200">The Experience</button>
+                  <button className="hover:text-red-400 duration-200 ">The Experience</button>
 
 
                 </ActiveLink>
@@ -81,7 +81,7 @@ const Header = () => {
                   className="w-fit"
                   to="/chefs"
                 >
-                  <button className="hover:text-red-400 duration-200">Our Chefs</button>
+                  <button className="hover:text-red-400 duration-200 ">Our Chefs</button>
 
 
                 </ActiveLink>
@@ -105,20 +105,29 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+
+        {/* large size */}
         <div className="hidden lg:block">
           <nav className="flex  px-5 py-4 lg:text-md xl:text-xl lg:space-x-4  xl:space-x-8 items-center">
             <ActiveLink
               className="w-fit"
               to="/"
             >
-              <button className="hover:text-red-400 duration-200">Home</button>
+              <button className="hover:text-red-400 duration-200 ">Home</button>
 
               </ActiveLink>
             <ActiveLink
               className="w-fit"
               to="/experience"
             >
-              <button className="hover:text-red-400 duration-200">The Experience</button>
+              <button className="hover:text-red-400 duration-200 ">The Experience</button>
 
 
             </ActiveLink>
