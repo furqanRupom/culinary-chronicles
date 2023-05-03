@@ -52,7 +52,7 @@ const Header = () => {
           <div
             className={
               toggle
-                ? "absolute lg:hidden w-full h-[380px] top-0 left-0 duration-300 bg-white translate-y-0 "
+                ? "absolute lg:hidden w-full pb-12 z-20 top-0 left-0 duration-300 bg-white translate-y-0 "
                 : "-translate-y-[800px] duration-500 lg:hidden"
             }
           >
@@ -119,23 +119,26 @@ const Header = () => {
                     onClick={signOut}
                     className=" text-center bg-red-400  flex items-center text-xl space-x-3 justify-center w-full  text-white rounded-full max-w-sm mx-auto px-3 py-2 group"
                   >
-                    <Link to="/" className="font-semibold">
+                    <h3  className="font-semibold">
                       Sign out
-                    </Link>
+                    </h3>
                     <div className="text-lg">
                       <FiLogOut />
                     </div>
                   </button>
                 </>
               ) : (
+                <Link to="/user/login">
+
                 <button className=" text-center mt-5 flex items-center text-2xl space-x-1 justify-center   bg-gray-200  rounded-full mx-auto px-8 py-2 group">
-                  <Link to={"/user/login"} className="font-semibold">
+                  <h3 className="font-semibold">
                     Sign In
-                  </Link>
+                  </h3>
                   <div className=" absolute translate-x-10 text-transparent group-hover:text-black group-hover:translate-x-12 duration-300">
                     <MdKeyboardArrowRight />
                   </div>
                 </button>
+                </Link>
               )}
             </div>
           </div>
@@ -180,25 +183,25 @@ const Header = () => {
                   onClick={signOut}
                   className=" text-center bg-red-400  flex items-center text-xl space-x-3 justify-center w-full  text-white rounded-full max-w-md mx-auto px-3 py-2 group"
                 >
-                  <Link to="/user/login" className="font-semibold">
+                  <h3  className="font-semibold">
                     Sign out
-                  </Link>
+                  </h3>
                   <div className="text-lg">
                     <FiLogOut />
                   </div>
                 </button>
               </div>
             ) : (
-              <>
+              <Link to="/user/login">
                 <button className=" text-center  flex items-center text-2xl space-x-1 justify-center   bg-gray-200  rounded-full mx-auto px-8 py-2 group">
-                  <Link to="/user/login" className="font-semibold">
+                  <h3 to="/user/login" className="font-semibold">
                     Sign In
-                  </Link>
+                  </h3>
                   <div className=" absolute translate-x-10 text-transparent group-hover:text-black group-hover:translate-x-12 duration-300">
                     <MdKeyboardArrowRight />
                   </div>
                 </button>
-              </>
+              </Link>
             )}
           </div>
         </div>

@@ -84,7 +84,7 @@ const signInWithGithub = ()=>{
             >
               Password
             </label>
-            <div className={!toggle ? 'relative' : 'hidden'}>
+            <div className='relative'>
               <input
                 type={show ? "text" : "password"}
                 id="password"
