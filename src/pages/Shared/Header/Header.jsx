@@ -129,7 +129,7 @@ const Header = () => {
                 </>
               ) : (
                 <button className=" text-center mt-5 flex items-center text-2xl space-x-1 justify-center   bg-gray-200  rounded-full mx-auto px-8 py-2 group">
-                  <Link to="/user/login" className="font-semibold">
+                  <Link to={"/user/login"} className="font-semibold">
                     Sign In
                   </Link>
                   <div className=" absolute translate-x-10 text-transparent group-hover:text-black group-hover:translate-x-12 duration-300">

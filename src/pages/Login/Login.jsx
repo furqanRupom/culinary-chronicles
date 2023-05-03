@@ -8,7 +8,6 @@ import { ChefContext } from "../../Providers/AuthProviders";
 const Login = () => {
   const { LoginUser ,LogInWithGoogle,LoginWithGithub,toggle} = useContext(ChefContext);
   const [show, setShow] = useState(false);
-
   const emailRef = useRef();
   const passwordRef = useRef();
   const location = useLocation();
@@ -134,7 +133,7 @@ const signInWithGithub = ()=>{
 
             <button
                 onClick={signInWithGoogle}
-            className="w-full bg-blue-500 text-white py-2 rounded-lg flex items-center justify-center space-x-2 mt-8 hover:bg-white duration-200 hover:text-blue-500 hover:border hover:border-blue-500"
+            className="w-full bg-blue-500 text-white py-2 rounded-lg flex items-center border justify-center space-x-2 mt-8 hover:bg-white duration-200 hover:text-blue-500 hover:border hover:border-blue-500"
           >
 
             <FaGoogle className="mt-[0.20rem]"/>
@@ -145,7 +144,7 @@ const signInWithGithub = ()=>{
           </button>
             <button
                 onClick={signInWithGithub}
-            className="w-full bg-black text-white py-2 rounded-lg flex items-center justify-center space-x-2 mt-8 hover:bg-white duration-200 hover:text-black hover:border hover:border-black"
+            className="w-full bg-black text-white py-2 border rounded-lg flex items-center justify-center space-x-2 mt-8 hover:bg-white duration-200 hover:text-black hover:border hover:border-black"
           >
 
             <FaGoogle className="mt-[0.20rem]"/>

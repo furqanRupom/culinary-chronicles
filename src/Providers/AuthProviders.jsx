@@ -34,17 +34,19 @@ const AuthProviders = ({children}) => {
     // login with google
 
     const LogInWithGoogle = () =>{
-
+            setLoading(true)
           return  signInWithPopup(auth,googleProvider)
     }
     // login with github
 
     const LoginWithGithub = ()=>{
+        setLoading(true)
         return signInWithPopup(auth,githubProvider);
     }
 
     // logout
     const logOut = ()=>{
+        setLoading(true)
         return signOut(auth)
     }
 
@@ -52,8 +54,8 @@ const AuthProviders = ({children}) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth,currentUser=>{
-            setLoading(false)
             setUser(currentUser)
+            setLoading(false)
         })
         return () => {
             unsubscribe()

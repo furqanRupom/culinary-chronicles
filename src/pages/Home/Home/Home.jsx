@@ -6,12 +6,12 @@ import { useLoaderData } from "react-router-dom";
 import Card from "../ChefCard/Card";
 import About from "../About/About";
 import Recipe from "../Recipe/Recipe";
-import Navigation from "../../../Navigation/Navigation";
 const Home = () => {
   const { toggle } = useContext(ChefContext);
   const chefInformationData = useLoaderData();
   return (
     <>
+
       <div
         className={
           toggle
@@ -63,11 +63,11 @@ const Home = () => {
         </div>
       </div>
 
-            <div className="bg-gray-100 p-12">
-            <Recipe />
-            </div>
-            <hr />
-            
+      <div className="bg-gray-100 p-12">
+        <Recipe />
+      </div>
+
+      <hr />
     </>
   );
 };
