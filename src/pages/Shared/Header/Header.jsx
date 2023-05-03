@@ -10,8 +10,9 @@ import { ChefContext } from "../../../Providers/AuthProviders";
 import ActiveLink from "../../../ActiveLink/ActiveLink";
 import LazyLoad from "react-lazyload";
 const Header = () => {
-  const { toggle, setToggle, user, logOut } = useContext(ChefContext);
+  const { toggle, setToggle, user, logOut,} = useContext(ChefContext);
   // console.log(user?.photoURL);
+
   const navigate = useNavigate();
   const signOut = () => {
     logOut()
@@ -21,6 +22,7 @@ const Header = () => {
       })
       .catch((error) => console.log(error.message));
   };
+
   return (
     <>
       <header className="font-Nunito relative  w-full lg:flex justify-between items-center px-4 bg-gray-100">

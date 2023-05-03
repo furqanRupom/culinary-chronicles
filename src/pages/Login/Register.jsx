@@ -5,16 +5,17 @@ import { ChefContext } from "../../Providers/AuthProviders";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-    const {registerUser} = useContext(ChefContext)
-    const [error,setError] = useState("")
-    const nameRef = useRef();
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const confirmRef = useRef();
-    const imageUrlRef = useRef();
-    const [show,setShow] = useState(false);
-    const [confirmShow,setConfirmShow]  = useState(false);
-    const navigate = useNavigate()
+  const { registerUser } = useContext(ChefContext);
+  const [error, setError] = useState("");
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const confirmRef = useRef();
+  const imageUrlRef = useRef();
+  const [show, setShow] = useState(false);
+  const [confirmShow, setConfirmShow] = useState(false);
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = nameRef.current.value;
@@ -22,30 +23,32 @@ const Register = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const confirmPassword = confirmRef.current.value;
-    if(password !== confirmPassword) return
-    if(!(password.length > 6)){
-        return setError('password should have at least 6 characters')
+    if (password !== confirmPassword) return;
+    if (!(password.length > 6)) {
+      return setError("password should have at least 6 characters");
     }
-    registerUser(email,password)
-    .then(result=>{
-        const loggedUser = result.user
-        // console.log(loggedUser)
-         updateProfile(loggedUser,{
-            displayName:name,
-            photoURL:photoUrl
+
+    registerUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        loggedUser.displayName = name;
+        loggedUser.photoURL = photoUrl;
+        updateProfile(loggedUser, {
+          displayName: loggedUser.displayName,
+          photoURL: loggedUser.photoURL,
         })
-        .then(()=>{
-            console.log('object')
-        })
-        .catch(()=>{
-            console.log('object')
-        })
-        navigate('/')
-    })
-    .catch(error =>{
-        setError(error.message)
-    })
-    console.log(name,email,password,photoUrl)
+          .then(() => {
+            console.log("updated");
+          })
+          .catch(() => {
+            console.log("not updated");
+          });
+        navigate("/");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+    console.log(name, email, password, photoUrl);
   };
 
   return (
@@ -68,7 +71,6 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-red-500"
               placeholder="Enter your Name"
               ref={nameRef}
-
               required
             />
           </div>
@@ -85,7 +87,6 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-red-500"
               placeholder="Enter your url of image"
               ref={imageUrlRef}
-
               required
             />
           </div>
@@ -102,7 +103,6 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-red-500"
               placeholder="Enter your email address"
               ref={emailRef}
-
               required
             />
           </div>
@@ -120,7 +120,6 @@ const Register = () => {
                 className="w-full  px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-red-500"
                 placeholder="Confirm your password"
                 ref={passwordRef}
-
                 required
               />
               <div
@@ -132,11 +131,11 @@ const Register = () => {
             </div>
           </div>
           <div className="mb-6">
-          <label
+            <label
               htmlFor="password"
               className="block text-gray-700 font-medium mb-2"
             >
-             Confirm Password
+              Confirm Password
             </label>
             <div className="relative">
               <input
@@ -163,9 +162,7 @@ const Register = () => {
             Sign Up
           </button>
 
-          <h2 className="py-3 text-red-600">
-                {error}
-          </h2>
+          <h2 className="py-3 text-red-600">{error}</h2>
         </form>
         <div className="text-center mt-4">
           <span className="text-gray-600 mr-2">Already have an account?</span>

@@ -14,16 +14,25 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate()
   const from = location.state?.from?.pathname || '/'
+  const [error,setError] = useState("")
 
   const signInWithGoogle = ()=>{
       LogInWithGoogle()
-      .then(result=> console.log(result.user))
+      .then(result=> {
+        console.log(result.user)
+        navigate(from,{replace:true})
+
+    })
       .catch(error => console.log(error.message))
 
 }
 const signInWithGithub = ()=>{
         LoginWithGithub()
-        .then(result => console.log(result.user))
+        .then(result => {
+            console.log(result.user)
+            navigate(from,{replace:true})
+
+        })
         .catch(error => console.log(error.message))
 }
 
@@ -41,7 +50,9 @@ const signInWithGithub = ()=>{
         navigate(from,{replace:true})
         From.reset()
     })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        setError(error.message.split(':')[1].trim())
+    });
   };
 
   return (
@@ -91,6 +102,9 @@ const signInWithGithub = ()=>{
               </div>
             </div>
           </div>
+          <p className="text-red-500 py-5 text-lg">
+            {error}
+          </p>
           <div className="flex items-center justify-between">
             <label htmlFor="remember" className="text-gray-700 font-medium">
               <input
