@@ -2,6 +2,7 @@ import React from "react";
 // import { FaCookie } from 'react-icons/fa';
 import { TbChefHat } from "react-icons/tb";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const Card = ({ chefInfo }) => {
   const {
@@ -10,6 +11,7 @@ const Card = ({ chefInfo }) => {
     number_of_recipes,
     amount_of_likes,
     image,
+    id
   } = chefInfo;
   return (
     <>
@@ -38,9 +40,11 @@ const Card = ({ chefInfo }) => {
           <p className="text-gray-200 text-base mb-2">
             {number_of_recipes} recipes
           </p>
+          <Link to={`/chef/${id}`}>
           <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full mb-2">
             View Recipe
           </button>
+          </Link>
         </div>
       </div>
 

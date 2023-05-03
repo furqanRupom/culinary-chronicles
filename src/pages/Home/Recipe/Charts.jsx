@@ -34,7 +34,7 @@ const ChefPieChart = () => {
           cy="50%"
           labelLine={false}
           label={CustomizedLabel}
-          outerRadius={isSmallDevice ? 120 : 200}
+          outerRadius={isSmallDevice ? 120 : 190}
           fill="#8884d8"
           dataKey="value"
         >
