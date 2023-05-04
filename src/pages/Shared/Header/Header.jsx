@@ -101,22 +101,12 @@ const Header = () => {
                     Home
                   </button>
                 </ActiveLink>
-                <ActiveLink className="w-fit" to="/experience">
+                <ActiveLink className="w-fit" to="/blog">
                   <button className="hover:text-red-400 duration-200 ">
-                    The Experience
-                  </button>
-                </ActiveLink>
-                <ActiveLink className="w-fit" to="/chefs">
-                  <button className="hover:text-red-400 duration-200 ">
-                    Our Chefs
+                    Blog
                   </button>
                 </ActiveLink>
 
-                <ActiveLink className="w-fit" to="/contact">
-                  <button className="hover:text-red-400 duration-200">
-                    Contact us
-                  </button>
-                </ActiveLink>
               </nav>
               <hr className="mt-4" />
 
@@ -152,22 +142,12 @@ const Header = () => {
             <ActiveLink className="w-fit" to="/">
               <button className="hover:text-red-400 duration-200 ">Home</button>
             </ActiveLink>
-            <ActiveLink className="w-fit" to="/experience">
+            <ActiveLink className="w-fit" to="/blog">
               <button className="hover:text-red-400 duration-200 ">
-                The Experience
-              </button>
-            </ActiveLink>
-            <ActiveLink className="w-fit" to="/chef">
-              <button className="hover:text-red-400 duration-200">
-                Our Chefs
+                Blog
               </button>
             </ActiveLink>
 
-            <ActiveLink className="w-fit" to="/contact">
-              <button className="hover:text-red-400 duration-200">
-                Contact us
-              </button>
-            </ActiveLink>
           </nav>
         </div>
         <div>

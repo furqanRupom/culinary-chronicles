@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 
 const About = () => {
   return (
@@ -47,48 +48,63 @@ const About = () => {
         </div>
       </section>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3">
-        <div className="lg:row-span-2 lg:h-full">
-          <img
-            className="rounded-2xl lg:h-full lg:object-cover"
-            src="https://img.freepik.com/free-photo/mid-shot-chef-holding-plate-with-pasta-making-ok-sign_23-2148794087.jpg?w=996&t=st=1683055682~exp=1683056282~hmac=985c71952ce32a7763fbe1222eb1506647493836349127a6c50ea77243cb33b9"
-            alt=""
-          />
+        <div className="lg:row-span-2 ">
+            <LazyLoad className="h-full">
+
+            <img
+              className="rounded-2xl lg:h-full lg:object-cover"
+              src="https://img.freepik.com/free-photo/mid-shot-chef-holding-plate-with-pasta-making-ok-sign_23-2148794087.jpg?w=996&t=st=1683055682~exp=1683056282~hmac=985c71952ce32a7763fbe1222eb1506647493836349127a6c50ea77243cb33b9"
+              alt=""
+            />
+
+            </LazyLoad>
+
         </div>
         <div className="">
-          <img
-            className="rounded-2xl lg:h-full lg:object-cover"
-            src="https://www.finedininglovers.com/sites/g/files/xknfdk626/files/2021-07/chef%20%281%29.jpg"
-            alt=""
-          />
+          <LazyLoad>
+            <img
+              className="rounded-2xl lg:h-full lg:object-cover"
+              src="https://www.finedininglovers.com/sites/g/files/xknfdk626/files/2021-07/chef%20%281%29.jpg"
+              alt=""
+            />
+          </LazyLoad>
         </div>
         <div className="md:col-span-2 lg:col-span-1 ">
-          <img
-            className="rounded-2xl md:w-full lg:w-auto lg:h-full lg:object-cover"
-            src="https://media.istockphoto.com/id/1408797987/photo/chef-decorating-a-plate-while-working-in-the-kitchen-at-a-restaurant.jpg?b=1&s=170667a&w=0&k=20&c=051trCkQfpVapBF2QVgpL0Hm-OftxJt1zzR-5Jgwj8A="
-            alt=""
-          />
+          <LazyLoad>
+            <img
+              className="rounded-2xl md:w-full lg:w-auto lg:h-full lg:object-cover"
+              src="https://media.istockphoto.com/id/1408797987/photo/chef-decorating-a-plate-while-working-in-the-kitchen-at-a-restaurant.jpg?b=1&s=170667a&w=0&k=20&c=051trCkQfpVapBF2QVgpL0Hm-OftxJt1zzR-5Jgwj8A="
+              alt=""
+            />
+          </LazyLoad>
         </div>
-        <div className="  ">
-          <img
-            className="rounded-2xl lg:h-full lg:object-cover"
-            src="https://a2s4r4h8.stackpathcdn.com/wp-content/uploads/2022/10/Chefs-Cutting-Ingredients.jpg"
-            alt=""
-          />
+        <div>
+          <LazyLoad>
+            <img
+              className="rounded-2xl lg:h-full lg:object-cover"
+              src="https://a2s4r4h8.stackpathcdn.com/wp-content/uploads/2022/10/Chefs-Cutting-Ingredients.jpg"
+              alt=""
+            />
+          </LazyLoad>
         </div>
 
-        <div >
-          <img
-            className="rounded-2xl lg:h-full lg:object-cover"
-            src="https://thumbs.dreamstime.com/b/female-chef-holding-plate-prepared-pasta-kitchen-female-chef-holding-plate-prepared-pasta-kitchen-hotel-135827202.jpg"
-            alt=""
-          />
+        <div>
+          <LazyLoad>
+            <img
+              className="rounded-2xl lg:h-full lg:object-cover"
+              src="https://thumbs.dreamstime.com/b/female-chef-holding-plate-prepared-pasta-kitchen-female-chef-holding-plate-prepared-pasta-kitchen-hotel-135827202.jpg"
+              alt=""
+            />
+          </LazyLoad>
         </div>
         <div className="md:col-span-2 lg:col-span-3">
-          <img
-            className="rounded-2xl lg:w-full "
-            src="https://www.betterteam.com/images/chef-job-description-6000x4000-20201119.jpeg"
-            alt=""
-          />
+          <LazyLoad>
+            <img
+              className="rounded-2xl lg:w-full "
+              src="https://www.betterteam.com/images/chef-job-description-6000x4000-20201119.jpeg"
+              alt=""
+            />
+          </LazyLoad>
         </div>
       </div>
     </section>

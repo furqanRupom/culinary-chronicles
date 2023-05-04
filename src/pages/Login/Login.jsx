@@ -6,7 +6,7 @@ import { ChefContext } from "../../Providers/AuthProviders";
 
 
 const Login = () => {
-  const { LoginUser ,LogInWithGoogle,LoginWithGithub,toggle} = useContext(ChefContext);
+  const { LoginUser ,LogInWithGoogle,LoginWithGithub} = useContext(ChefContext);
   const [show, setShow] = useState(false);
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -147,7 +147,7 @@ const signInWithGithub = ()=>{
             className="w-full bg-black text-white py-2 border rounded-lg flex items-center justify-center space-x-2 mt-8 hover:bg-white duration-200 hover:text-black hover:border hover:border-black"
           >
 
-            <FaGoogle className="mt-[0.20rem]"/>
+            <FaGithub className="mt-[0.20rem]"/>
             <h2>
             Sign in with Github
             </h2>

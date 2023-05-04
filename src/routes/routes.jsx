@@ -7,6 +7,7 @@ import PrivateRoute from "../private/PrivateRoute";
 import LoginLayouts from "../Layouts/LoginLayouts";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Login/Register";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: () => fetch("http://localhost:4000/"),
+      },
+      {
+        path:"/blog",
+        element:<Blog />
       },
       {
         path: "/chef/:id",
