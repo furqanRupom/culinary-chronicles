@@ -63,7 +63,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 p-12">
+      <div className="bg-gray-100  md:p-8 lg:p-12">
         <Recipe />
       </div>
 
