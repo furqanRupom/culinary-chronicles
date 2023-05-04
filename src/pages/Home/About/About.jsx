@@ -78,7 +78,7 @@ const About = () => {
             />
           </LazyLoad>
         </div>
-        <div>
+        <div className="md:col-span-2">
           <LazyLoad>
             <img
               className="rounded-2xl lg:h-full lg:object-cover"
@@ -88,15 +88,7 @@ const About = () => {
           </LazyLoad>
         </div>
 
-        <div>
-          <LazyLoad>
-            <img
-              className="rounded-2xl lg:h-full lg:object-cover"
-              src="https://thumbs.dreamstime.com/b/female-chef-holding-plate-prepared-pasta-kitchen-female-chef-holding-plate-prepared-pasta-kitchen-hotel-135827202.jpg"
-              alt=""
-            />
-          </LazyLoad>
-        </div>
+
         <div className="md:col-span-2 lg:col-span-3">
           <LazyLoad>
             <img
