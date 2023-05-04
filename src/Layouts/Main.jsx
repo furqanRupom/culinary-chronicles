@@ -12,7 +12,7 @@ const Main = () => {
       <Header />
       <main>
             {
-                navigation.state === 'loading'? <div className="flex items-center justify-center h-[300px]"> <FaSpinner className="text-3xl" /></div>: ''
+                navigation.state === 'loading'? <div className="flex items-center justify-center h-screen animate-spin"> <FaSpinner className="text-3xl" /></div>: ''
             }
         <Outlet />
       </main>
