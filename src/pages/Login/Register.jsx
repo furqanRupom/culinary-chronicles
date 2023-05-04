@@ -23,7 +23,9 @@ const Register = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const confirmPassword = confirmRef.current.value;
-    if (password !== confirmPassword) return;
+    if (password !== confirmPassword) {
+      return setError('password did not matched')
+    };
     if (!(password.length > 6)) {
       return setError("password should have at least 6 characters");
     }
