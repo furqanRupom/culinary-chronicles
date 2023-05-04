@@ -78,7 +78,7 @@ const ChefRecipes = () => {
               className="bg-white shadow rounded-lg overflow-hidden w-[400px] md:w-auto"
             >
               <div className="md:h-auto">
-                <LazyLoad className="">
+                <LazyLoad height={200}>
                   <img
                     src={recipe.recipe_image}
                     alt={recipe.recipe_name}

@@ -48,7 +48,7 @@ const Register = () => {
         navigate("/");
       })
       .catch((error) => {
-        setError(error.message);
+        setError(error.message.split(':')[1].trim());
       });
     console.log(name, email, password, photoUrl);
   };

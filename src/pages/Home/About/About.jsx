@@ -49,7 +49,7 @@ const About = () => {
       </section>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3">
         <div className="lg:row-span-2 ">
-            <LazyLoad className="h-full">
+            <LazyLoad height={200}  className="h-full">
 
             <img
               className="rounded-2xl lg:h-full lg:object-cover"
@@ -61,7 +61,7 @@ const About = () => {
 
         </div>
         <div className="">
-          <LazyLoad>
+          <LazyLoad height={200} >
             <img
               className="rounded-2xl lg:h-full lg:object-cover"
               src="https://www.finedininglovers.com/sites/g/files/xknfdk626/files/2021-07/chef%20%281%29.jpg"
@@ -70,7 +70,7 @@ const About = () => {
           </LazyLoad>
         </div>
         <div className="md:col-span-2 lg:col-span-1 ">
-          <LazyLoad>
+          <LazyLoad height={200}  >
             <img
               className="rounded-2xl md:w-full lg:w-auto lg:h-full lg:object-cover"
               src="https://media.istockphoto.com/id/1408797987/photo/chef-decorating-a-plate-while-working-in-the-kitchen-at-a-restaurant.jpg?b=1&s=170667a&w=0&k=20&c=051trCkQfpVapBF2QVgpL0Hm-OftxJt1zzR-5Jgwj8A="
@@ -79,7 +79,7 @@ const About = () => {
           </LazyLoad>
         </div>
         <div className="md:col-span-2">
-          <LazyLoad>
+          <LazyLoad height={200} >
             <img
               className="rounded-2xl lg:h-full lg:object-cover"
               src="https://a2s4r4h8.stackpathcdn.com/wp-content/uploads/2022/10/Chefs-Cutting-Ingredients.jpg"
@@ -90,7 +90,7 @@ const About = () => {
 
 
         <div className="md:col-span-2 lg:col-span-3">
-          <LazyLoad>
+          <LazyLoad height={200} >
             <img
               className="rounded-2xl lg:w-full "
               src="https://www.betterteam.com/images/chef-job-description-6000x4000-20201119.jpeg"

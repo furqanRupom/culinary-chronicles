@@ -20,7 +20,7 @@ const Card = ({ chefInfo }) => {
           <TbChefHat className="text-red-500 mr-2" size={24} />
           <div className="font-bold text-white">CulinaryChronicles</div>
         </div>
-        <LazyLoad>
+        <LazyLoad height={200} >
         <img
           className="w-full h-[450px] md:h-[450px] object-cover transition duration-300 ease-in-out transform group-hover:scale-105"
           src={image}
