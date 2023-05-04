@@ -75,14 +75,14 @@ const ChefRecipes = () => {
           {recipes.map((recipe) => (
             <div
               key={recipe.recipe_name}
-              className="bg-white shadow rounded-lg overflow-hidden"
+              className="bg-white shadow rounded-lg overflow-hidden w-[400px] md:w-auto"
             >
-              <div className="h-64">
-                <LazyLoad>
+              <div className="md:h-auto">
+                <LazyLoad className="">
                   <img
                     src={recipe.recipe_image}
                     alt={recipe.recipe_name}
-                    className="w-full  h-full object-cover"
+                    className=" md:w-full h-[48] md:h-[300px] object-cover"
                   />
                 </LazyLoad>
               </div>
