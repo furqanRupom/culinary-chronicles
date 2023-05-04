@@ -1,7 +1,7 @@
 # b7a10-chef-recipe-hunter-client-side-furqanRupom
 b7a10-chef-recipe-hunter-client-side-furqanRupom created by GitHub Classroom
 
-* culinary-chronicles website overview : Our chef restaurant website is designed to provide an exceptional culinary experience to our customers. We offer a wide range of delicious recipes prepared by our skilled and experienced chefs. Our website is user-friendly and easy to navigate, making it easy for customers to find the information they need.
+* culinary-chronicles website overview : culinary-chronicles website is designed to provide an exceptional culinary experience to our customers. We offer a wide range of delicious recipes prepared by our skilled and experienced chefs. Our website is user-friendly and easy to navigate, making it easy for customers to find the information they need.
 
 * Header and navbar : The header of the culinary-chronicles  website features a navbar with links to different sections of the site. On the left side of the header, there is a conditional sign in or sign up button that directs users to the appropriate page. The header is designed to be user-friendly and easy to navigate
 
