@@ -10,9 +10,13 @@ const Main = () => {
   return (
     <div>
       <Header />
-      <main>
+      <main >
             {
-                navigation.state === 'loading'? <div className="flex items-center justify-center h-screen animate-spin"> <FaSpinner className="text-3xl" /></div>: ''
+                navigation.state === 'loading'? <div className="flex items-center justify-center h-screen overflow-hidden">
+                    <div className="animate-spin">
+                    <FaSpinner className="text-3xl" />
+                    </div>
+                   </div>: ''
             }
         <Outlet />
       </main>
