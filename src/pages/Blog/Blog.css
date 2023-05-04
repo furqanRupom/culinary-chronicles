@@ -1,0 +1,7 @@
+@media print {
+    p {
+      font-size: 10pt;
+      line-height: 1.2;
+      margin-bottom: 0.5em;
+    }
+  }

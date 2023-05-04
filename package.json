@@ -19,6 +19,7 @@
     "react-icons": "^4.8.0",
     "react-lazyload": "^3.2.0",
     "react-router-dom": "^6.11.0",
+    "react-to-pdf": "^0.0.14",
     "recharts": "^2.5.0",
     "sort-by": "^1.2.0"
   },
