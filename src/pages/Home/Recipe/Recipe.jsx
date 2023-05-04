@@ -4,7 +4,7 @@ import ChefPieChart from "./Charts";
 
 const Recipe = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto py-20 items-center shadow p-10 rounded-lg font-Nunito bg-white justify-items-center px-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto py-3 md:16 lg:py-20 items-center shadow p-10 rounded-lg font-Nunito bg-white justify-items-center px-12">
 
         <div>
       <h3 className="text-2xl font-bold pb-6">What is the most reserved type of cuisine in Recife?</h3>
