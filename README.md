@@ -11,4 +11,4 @@ b7a10-chef-recipe-hunter-client-side-furqanRupom created by GitHub Classroom
 
 * Blog Page: in this blog page we added some of frequently asked questions and answer as well.
 
-https://culinary-chronicles-auth.web.app/
+culinary-chronicles website live link :  https://culinary-chronicles-auth.web.app/
