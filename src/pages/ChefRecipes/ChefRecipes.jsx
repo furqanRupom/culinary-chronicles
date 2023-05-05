@@ -16,9 +16,7 @@ const ChefRecipes = () => {
     recipes,
   } = useLoaderData();
   const [favorites, setFavorites] = useState([]);
-
   const isFavorite = (recipe) => favorites.includes(recipe);
-
   const toggleFavorite = (recipe) => {
     if (isFavorite(recipe)) {
       setFavorites(favorites.filter((fav) => fav !== recipe));
@@ -27,23 +25,8 @@ const ChefRecipes = () => {
       toast.success("add to the favorite");
     }
   };
-  const ingredients = [
-    "1 pound spaghetti",
-    "6 slices of bacon",
-    "4 large egg yolks",
-    "1 cup freshly grated Parmesan cheese",
-    "1/2 teaspoon salt",
-    "1/4 teaspoon black pepper",
-    "2 cloves garlic, minced",
-  ];
-  const instructions = [
-    "Bring a large pot of salted water to a boil. Add the spaghetti and cook until al dente, according to package directions. Reserve 1 cup of the pasta cooking water, then drain the spaghetti.",
-    "Meanwhile, in a large skillet, cook the bacon over medium heat until crisp. Remove with a slotted spoon and drain on paper towels.",
-    "In a small bowl, whisk together the egg yolks, Parmesan cheese, salt, and black pepper.",
-    "Add the garlic to the skillet and cook until fragrant, about 1 minute. Remove from heat.",
-    
 
-  ];
+
   return (
     <div className=" flex flex-col font-Nunito">
       {/* Chef Information and Images */}
@@ -120,7 +103,7 @@ const ChefRecipes = () => {
           </div>
           <div className="flex items-center mt-5 w-full space-x-5">
             <div className="flex items-center justify-between">
-              {[...Array(4)].map((_, i) => (
+              {[...Array(recipe.rating)].map((_, i) => (
                 <FaStar key={i} size={18} color="gold" />
               ))}
               {[...Array(1)].map((_, i) => (
@@ -133,23 +116,20 @@ const ChefRecipes = () => {
             <h5 className="text-lg font-bold">Ingredients:</h5>
             <ul className="list-decimal list-inside">
             {
-              ingredients.map((ingredients) => <li> {ingredients}</li>)
+              recipe?.ingredients?.map((ingredient) => <li> {ingredient}</li>)
             }
             </ul>
           </div>
           <div className="mt-5">
             <h5 className="text-lg font-bold">Cooking Method:</h5>
-            <ol className="list-decimal list-inside">
-              {
-                instructions.map(instruction => <ol> {instruction}</ol>)
-              }
-            </ol>
+            { recipe.cooking_method}
+
           </div>
         </div>
       </div>
     ))}
   </div>
-</div>
+      </div>
 
       <Toaster
         containerStyle={{
