@@ -40,7 +40,7 @@ const ChefRecipes = () => {
             />
           </div>
           <div className="md:w-1/2 lg:w-3/5 md:pl-10">
-            <h3 className="text-4xl font-bold text-red-400 mb-4">{name}</h3>
+            <h3 className="text-4xl font-bold text-red-400 mb-4 mt-4 lg:mt-0">{name}</h3>
             <p className="text-lg mb-4">{description}</p>
             <div className="flex mb-4">
               <div className="mr-4">

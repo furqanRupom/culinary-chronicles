@@ -52,7 +52,7 @@ const Header = () => {
           <div
             className={
               toggle
-                ? "absolute lg:hidden w-full pb-12 z-20 top-0 left-0 duration-300 bg-white translate-y-0 "
+                ? "absolute lg:hidden w-full pb-12 z-20 top-0 left-0 duration-500 bg-white translate-y-0 "
                 : "-translate-y-[800px] duration-500 lg:hidden"
             }
           >
