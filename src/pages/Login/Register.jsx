@@ -18,6 +18,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const form = e.target
     const name = nameRef.current.value;
     const photoUrl = imageUrlRef.current.value;
     const email = emailRef.current.value;
@@ -30,17 +31,20 @@ const Register = () => {
       return setError("password should have at least 6 characters");
     }
 
+
     registerUser(email, password)
       .then((result) => {
         const loggedUser = result.user;
         loggedUser.displayName = name;
         loggedUser.photoURL = photoUrl;
+        form.reset()
         updateProfile(loggedUser, {
           displayName: loggedUser.displayName,
           photoURL: loggedUser.photoURL,
         })
           .then(() => {
             console.log("updated");
+
           })
           .catch(() => {
             console.log("not updated");
@@ -157,6 +161,7 @@ const Register = () => {
             </div>
           </div>
 
+          <h2 className="py-1 text-red-600">{error}</h2>
           <button
             type="submit"
             className="w-full bg-red-500 text-white py-2 rounded-lg mt-8 hover:bg-red-600"
@@ -164,7 +169,6 @@ const Register = () => {
             Sign Up
           </button>
 
-          <h2 className="py-3 text-red-600">{error}</h2>
         </form>
         <div className="text-center mt-4">
           <span className="text-gray-600 mr-2">Already have an account?</span>
