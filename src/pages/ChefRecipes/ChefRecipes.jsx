@@ -4,7 +4,7 @@ import { FaHeart, FaRegClock } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { orange500 } from "./ChefRecipes.module.css";
 import LazyLoad from "react-lazyload";
-import { FaStar } from 'react-icons/fa';
+import { FaStar } from "react-icons/fa";
 const ChefRecipes = () => {
   const {
     name,
@@ -27,7 +27,23 @@ const ChefRecipes = () => {
       toast.success("add to the favorite");
     }
   };
+  const ingredients = [
+    "1 pound spaghetti",
+    "6 slices of bacon",
+    "4 large egg yolks",
+    "1 cup freshly grated Parmesan cheese",
+    "1/2 teaspoon salt",
+    "1/4 teaspoon black pepper",
+    "2 cloves garlic, minced",
+  ];
+  const instructions = [
+    "Bring a large pot of salted water to a boil. Add the spaghetti and cook until al dente, according to package directions. Reserve 1 cup of the pasta cooking water, then drain the spaghetti.",
+    "Meanwhile, in a large skillet, cook the bacon over medium heat until crisp. Remove with a slotted spoon and drain on paper towels.",
+    "In a small bowl, whisk together the egg yolks, Parmesan cheese, salt, and black pepper.",
+    "Add the garlic to the skillet and cook until fragrant, about 1 minute. Remove from heat.",
+    
 
+  ];
   return (
     <div className=" flex flex-col font-Nunito">
       {/* Chef Information and Images */}
@@ -91,35 +107,50 @@ const ChefRecipes = () => {
           <h4 className="text-lg font-bold">{recipe.recipe_name}</h4>
           <p className="text-sm">{recipe.recipe_description}</p>
           <div className="mt-4 flex justify-between items-center">
-
-  <div className="flex items-center">
-    <FaRegClock size={18} color="#555" />
-    <p className="text-sm ml-2 font-medium">{recipe.prep_time} prep</p>
-    <span className="text-sm mx-2 font-medium text-gray-400">/</span>
-    <FaRegClock size={18} color="#555" />
-    <p className="text-sm ml-2 font-medium">{recipe.cook_time} cook</p>
-  </div>
-  <div onClick={() => toggleFavorite(recipe)} className="cursor-pointer">
-    <FaHeart size={20} color={isFavorite(recipe) ? "tomato" : "gray"} />
-  </div>
-</div>
-  <div className="flex items-center mt-5 w-full space-x-5">
-    <div className="flex items-center justify-between">
-      {[...Array(4)].map((_, i) => (
-        <FaStar key={i} size={18} color="gold" />
-      ))}
-      {[...Array(1)].map((_, i) => (
-        <FaStar key={i} size={18} color="gray" />
-      ))}
-    </div>
-    <p className="text-sm ml-2 font-medium">cook level : {recipe.difficulty}</p>
-  </div>
-
+            <div className="flex items-center">
+              <FaRegClock size={18} color="#555" />
+              <p className="text-sm ml-2 font-medium">{recipe.prep_time} prep</p>
+              <span className="text-sm mx-2 font-medium text-gray-400">/</span>
+              <FaRegClock size={18} color="#555" />
+              <p className="text-sm ml-2 font-medium">{recipe.cook_time} cook</p>
+            </div>
+            <div onClick={() => toggleFavorite(recipe)} className="cursor-pointer">
+              <FaHeart size={20} color={isFavorite(recipe) ? "tomato" : "gray"} />
+            </div>
+          </div>
+          <div className="flex items-center mt-5 w-full space-x-5">
+            <div className="flex items-center justify-between">
+              {[...Array(4)].map((_, i) => (
+                <FaStar key={i} size={18} color="gold" />
+              ))}
+              {[...Array(1)].map((_, i) => (
+                <FaStar key={i} size={18} color="gray" />
+              ))}
+            </div>
+            <p className="text-sm ml-2 font-medium">cook level: {recipe.difficulty}</p>
+          </div>
+          <div className="mt-5">
+            <h5 className="text-lg font-bold">Ingredients:</h5>
+            <ul className="list-decimal list-inside">
+            {
+              ingredients.map((ingredients) => <li> {ingredients}</li>)
+            }
+            </ul>
+          </div>
+          <div className="mt-5">
+            <h5 className="text-lg font-bold">Cooking Method:</h5>
+            <ol className="list-decimal list-inside">
+              {
+                instructions.map(instruction => <ol> {instruction}</ol>)
+              }
+            </ol>
+          </div>
         </div>
       </div>
     ))}
   </div>
 </div>
+
       <Toaster
         containerStyle={{
           top: 100,
